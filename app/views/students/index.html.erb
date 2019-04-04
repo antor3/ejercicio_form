@@ -1,0 +1,13 @@
+
+<h1>Hola students rails</h1>
+
+<a href="/students/new">Crear nuevo student</a>
+
+<ol>
+	<%@students.each do |student| %>
+		<li><a href="/students/<%=student.id%>"><%=student.name%> <%=student.lname%> <%=student.age%></a> <a href="/students/<%=student.id%>/edit">Editar</a>
+		</li>
+
+	<%end%>
+</ol>
+

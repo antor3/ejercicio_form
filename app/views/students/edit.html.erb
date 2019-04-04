@@ -1,0 +1,16 @@
+
+
+
+<form action="/students" method="post">
+	<input type="text" name="student[name]" placeholder="Digita tu nombre">
+	<input type="text" name="student[lname]" placeholder="Digita tu apellido">
+	<input type="text" name="student[age]" placeholder="Digita tu edad">
+	<button type="submit">Crear student</button>
+</form>
+
+<%= form_for :person do |f| %>
+  First name: <%= f.text_field :name %><br />
+  Last name : <%= f.text_field :lname %><br />
+  Biography : <%= f.text_area :age %><br />
+  <%= f.submit %>
+<% end %>
